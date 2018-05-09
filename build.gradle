@@ -1,3 +1,6 @@
+import org.redline_rpm.header.Os
+import org.redline_rpm.header.RpmType
+
 buildscript {
     repositories {
         mavenCentral()
@@ -43,3 +46,21 @@ bootJar {
     launchScript()
 }
 
+ospackage {
+    packageName = "employeeservicesuit"
+    version = "0.0.1"
+    type = RpmType.BINARY
+    os = Os.LINUX
+
+    preInstall file('scripts/preInstall.sh')
+    postInstall file('scripts/postUninstall.sh')
+
+    user "microservice"
+    permissionGroup "microservice"
+}
+
+buildDeb {
+    user "microservice"
+    permissionGroup "microservice"
+    link("/etc/init.d/employeeservicesuit", "/opt/EmployeeServiceSuit-boot/bin/EmployeeServiceSuit")
+}
