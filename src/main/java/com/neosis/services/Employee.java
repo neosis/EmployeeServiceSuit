@@ -9,7 +9,7 @@ public class Employee {
         this.employeeId = employeeId;
         if(!employeeId.equalsIgnoreCase("0")) {
             this.firstName = "First";
-            this.lastName = "Last ";
+            this.lastName = "Last";
         }
     }
 
