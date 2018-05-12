@@ -43,7 +43,7 @@ mainClassName = "com.neosis.Application"
 
 bootJar {
     baseName = 'employeeservicesuit'
-    version = '0.0.2'
+    version = '0.0.3'
     launchScript()
 }
 
@@ -58,7 +58,7 @@ ospackage {
         into 'EmployeeServiceSuit-boot/scripts'
     }
 //    preInstall file('scripts/preInstall.sh')
-//    postInstall file('scripts/postUninstall.sh')
+    postInstall file('scripts/postInstall.sh')
 
     //user "microservice"
     //permissionGroup "microservice"
