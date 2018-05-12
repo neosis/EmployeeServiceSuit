@@ -43,13 +43,13 @@ mainClassName = "com.neosis.Application"
 
 bootJar {
     baseName = 'employeeservicesuit'
-    version = '0.0.3'
+    version = '0.0.4'
     launchScript()
 }
 
 ospackage {
     packageName = "employeeservicesuit"
-    version = "0.0.3"
+    version = "0.0.4"
     type = RpmType.BINARY
     os = Os.LINUX
 
