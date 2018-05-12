@@ -1,0 +1,10 @@
+[Unit]
+Description=Employee Micro Services
+After=syslog.target
+[Service]
+SyslogIdentifier=EmployeeServiceSuite
+ExecStart=/opt/EmployeeServiceSuit-boot/bin/EmployeeServiceSuit
+User=root
+Type=simple
+[Install]
+WantedBy=multi-user.target
