@@ -58,7 +58,7 @@ ospackage {
 
     requires('default-jre')
     from('scripts/employeeservicesuit.service') {
-        into 'EmployeeServiceSuit-boot/scripts'
+        into '/etc/systemd/system'
     }
 
     //user "microservice"
@@ -68,5 +68,5 @@ ospackage {
 buildDeb {
 //    user "microservice"
 //    permissionGroup "microservice"
-    link("/etc/systemd/system/employeeservicesuit.service", "/opt/EmployeeServiceSuit-boot/scripts/employeeservicesuit.service")
+//    link("/etc/systemd/system/employeeservicesuit.service", "/opt/EmployeeServiceSuit-boot/scripts/employeeservicesuit.service")
 }
