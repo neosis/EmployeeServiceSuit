@@ -49,13 +49,13 @@ bootJar {
 
 ospackage {
     packageName = "employeeservicesuit"
-    version = "0.0.2"
+    version = "0.0.3"
     type = RpmType.BINARY
     os = Os.LINUX
 
     requires('default-jre')
     from('scripts/employeeservicesuit.service') {
-        into 'scripts'
+        into 'EmployeeServiceSuit-boot/scripts'
     }
 //    preInstall file('scripts/preInstall.sh')
 //    postInstall file('scripts/postUninstall.sh')
