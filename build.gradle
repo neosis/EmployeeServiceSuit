@@ -53,6 +53,10 @@ ospackage {
     type = RpmType.BINARY
     os = Os.LINUX
 
+    requires('openjdk-8-jdk')
+    from('scripts') {
+        into 'scripts'
+    }
 //    preInstall file('scripts/preInstall.sh')
 //    postInstall file('scripts/postUninstall.sh')
 
@@ -63,9 +67,5 @@ ospackage {
 buildDeb {
 //    user "microservice"
 //    permissionGroup "microservice"
-//    link("/etc/init.d/employeeservicesuit", "/opt/EmployeeServiceSuit-boot/bin/EmployeeServiceSuit")
-    requires('default-jre')
-    from('scripts/employeeservicesuit.service') {
-        into '/etc/systemd/system'
-    }
+//    link("/etc/init.d/employeeservicesuit", "/opt/EmployeeServiceSuit-boot/bin/EmployeeServiceSuit"
 }
