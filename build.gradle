@@ -43,22 +43,23 @@ mainClassName = "com.neosis.Application"
 
 bootJar {
     baseName = 'employeeservicesuit'
-    version = '0.0.4'
+    version = '0.0.5'
     launchScript()
 }
 
 ospackage {
     packageName = "employeeservicesuit"
-    version = "0.0.4"
+    version = "0.0.5"
     type = RpmType.BINARY
     os = Os.LINUX
+
+    //    preInstall file('scripts/preInstall.sh')
+    postInstall file('scripts/postInstall.sh')
 
     requires('default-jre')
     from('scripts/employeeservicesuit.service') {
         into 'EmployeeServiceSuit-boot/scripts'
     }
-//    preInstall file('scripts/preInstall.sh')
-    postInstall file('scripts/postInstall.sh')
 
     //user "microservice"
     //permissionGroup "microservice"
