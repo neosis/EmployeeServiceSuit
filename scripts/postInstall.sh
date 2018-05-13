@@ -1,1 +1,1 @@
-/bin/systemctl enable employeeservicesuit.service 2> /dev/null || :
+/bin/systemctl enable employeeservicesuite.service 2> /dev/null || :
