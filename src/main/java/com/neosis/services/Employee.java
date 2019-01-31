@@ -8,8 +8,8 @@ public class Employee {
     public Employee (String employeeId){
         this.employeeId = employeeId;
         if(!employeeId.equalsIgnoreCase("0")) {
-            this.firstName = "Ramesh";
-            this.lastName = "Ashutosh";
+            this.firstName = "Jack";
+            this.lastName = "Bill";
         }
     }
 
